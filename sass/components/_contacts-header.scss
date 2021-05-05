@@ -1,0 +1,60 @@
+.contacts {
+  align-items: center;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  margin-left: auto;
+
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    flex-direction: column;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
+}
+
+.contacts__link {
+  display: flex;
+  align-items: center;
+  color: var(--primary-text-color);
+  transition: color var(--animation);
+
+  &:hover > .contacts__icon,
+  &:focus > .contacts__icon {
+    fill: var(--accent-color);
+  }
+}
+
+.contacts__icon {
+  margin-right: 10px;
+  fill: var(--primary-text-color);
+  transition: fill var(--animation);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts__item > a[href='mailto:info@devstudio.com'] {
+    padding-top: 21px;
+    padding-bottom: 5px;
+    padding-right: 15px;
+  }
+  .contacts__item > a[href='tel:+380961111111'] {
+    padding-bottom: 21px;
+    padding-top: 5px;
+    padding-right: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contacts__link {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__link {
+    padding: 32px 0;
+  }
+  .contacts__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}

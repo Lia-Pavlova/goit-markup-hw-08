@@ -1,0 +1,42 @@
+/* Контейнер Public */
+
+.public {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+  width: 100%;
+
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    width: calc((100% - 30px) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((50% - 45px) / 2);
+    align-items: start;
+    margin-bottom: 0;
+  }
+}
+
+.public__title {
+  color: var(--dark-bg-text-color);
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  margin-bottom: 20px;
+  padding-top: 12px;
+}
+
+@media screen and (min-width: 768.5px) and (max-width: 1199.98px) {
+  .public__title {
+    padding-top: 5px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .public__title {
+    padding-top: 0;
+  }
+}

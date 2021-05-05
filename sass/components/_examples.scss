@@ -1,0 +1,84 @@
+.example {
+  --grid-item-count: 3;
+  --space-between: 30px;
+
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    --grid-item-count: 2;
+  }
+
+  @media screen and (max-width: 767.98px) {
+    --grid-item-count: 1;
+  }
+}
+
+.example__card {
+  @media screen and (max-width: 767.98px) {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+}
+
+/* Синий оверлей */
+
+.example__description {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 24px;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  line-height: 1.56;
+  color: var(--dark-bg-text-color);
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform var(--animation);
+}
+
+.example__info {
+  padding: 20px 24px;
+  border: 1px solid var(--border-examples);
+  border-top: none;
+  flex-grow: 2;
+}
+
+.example__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--title-text-color);
+  margin-bottom: 4px;
+}
+
+.example__type {
+  font-size: 16px;
+  line-height: 1.87;
+  margin-bottom: 0;
+  color: var(--primary-text-color);
+}
+
+.example__link {
+  display: flex;
+  transition: box-shadow var(--animation);
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+
+  &:hover,
+  &:focus {
+    box-shadow: var(--box-shadow-examples);
+  }
+
+  &:hover .overlay,
+  &:focus .overlay {
+    transform: translateY(0);
+  }
+}

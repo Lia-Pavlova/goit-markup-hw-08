@@ -1,0 +1,90 @@
+:root {
+  /* Colors */
+
+  --primary-text-color: #757575;
+  --title-text-color: #212121;
+  --accent-color: #2196f3;
+  --dark-bg-text-color: #ffffff;
+  --accent-button-color: #188ce8;
+  --dark-bg-color: #2f303a;
+  --hero-bg: #e5e5e5;
+  --team-bg-color: #f5f4fa;
+  --border-header: #ececec;
+  --border-examples: #eeeeee;
+  --icon-bg: #44454e;
+  --icon-color: #afb1b8;
+
+  /* Shadows + animation */
+
+  --box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  --box-shadow-btn: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  --box-shadow-examples: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Fonts: Base styles */
+
+  --font-family-base: 'Roboto', sans-serif;
+  --font-family-logo: 'Raleway', sans-serif;
+  --font-size-base: 14px;
+  --letter-spacing-base: 0.03em;
+  --line-height-base: 1.71;
+
+  /* Fonts: Weights */
+
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-ultra-bold: 900;
+  --font-bold: 700;
+
+  /* Fonts: Sizes */
+
+  --font-size-hero-title: 44px;
+  --font-size-logo: 26px;
+  --font-size-sub-input: 16px;
+  --font-size-modal-title: 20px;
+  --font-size-form-label: 12px;
+  --font-size-member: 16px;
+  --font-size-btn: 16px;
+  --font-size-overlay: 18px;
+  --font-size-example-title: 18px;
+  --font-size-example-type: 16px;
+  --font-size-section-title: 36px;
+
+  /* Letter-spacing */
+
+  --letter-spacing-menu: 0.02em;
+  --letter-spacing-contacts: 0.02em;
+  --letter-spacing-sub: 0.03em;
+  --letter-spacing-public-title: 0.03em;
+  --letter-spacing-form: 0.01em;
+  --letter-spacing-filter-btn: 0.03em;
+  --letter-spacing-example-title: 0.06em;
+  --letter-spacing-btn: 0.06em;
+
+  /* Line-height */
+
+  --line-height-menu: 1.14;
+  --line-height-hero-title: 1.36;
+  --line-height-contacts: 1.14;
+  --line-height-sub-title: 1.14;
+  --line-height-sub-input: 1.25;
+  --line-height-public-title: 1.14;
+  --line-height-modal-title: 1.15;
+  --line-height-form-label: 1.17;
+  --line-height-form-input: 1.14;
+  --line-height-member: 1.19;
+  --line-height-logo: 1.19;
+  --line-filter-btn: 1.62;
+  --line-height-feature-title: 1.14;
+  --line-height-overlay: 1.56;
+  --line-height-example-title: 2;
+  --line-height-example-type: 1.87;
+  --line-height-btn: 1.87;
+  --line-height-activities: 1.14;
+  --line-height-section-title: 1.17;
+}
+
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1200px;
