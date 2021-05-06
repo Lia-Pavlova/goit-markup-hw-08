@@ -17,12 +17,10 @@
 }
 
 .address__item {
-  margin-bottom: 9px;
-}
+  margin-bottom: 8px;
 
-@media screen and (max-width: 1199.98px) {
-  .address__item {
-    margin-bottom: 8px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 9px;
   }
 }
 

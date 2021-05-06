@@ -1,13 +1,4 @@
-@media screen and (min-width: 768px) {
-  .burger__btn {
-    display: none;
-  }
-  .mobile-menu {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 480px) and (max-width: 767.98px) {
+@media screen and (max-width: 767.98px) {
   .menu {
     display: none;
   }
@@ -41,6 +32,15 @@
   .mobile-menu__close-btn:hover,
   .mobile-menu__close-btn:focus {
     fill: var(--accent-color);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .burger__btn {
+    display: none;
+  }
+  .mobile-menu {
+    display: none;
   }
 }
 
@@ -105,12 +105,6 @@
 .mobile-menu__contact-tel {
   font-size: 34px;
   color: var(--accent-color);
-}
-
-@media screen and (max-width: 480px) {
-  .mobile-menu__contact-tel {
-    font-size: 26px;
-  }
 }
 
 .mobile-menu__contact-mail {
