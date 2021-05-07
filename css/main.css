@@ -319,6 +319,7 @@ html {
 *::after,
 *::before {
   box-sizing: inherit;
+  outline: 1px solid red;
 }
 
 body {
@@ -1374,7 +1375,7 @@ address {
 }
 
 .example {
-  --grid-item-count: 1;
+  /*--grid-item-count: 1;*/
   --space-between: 30px;
 }
 
