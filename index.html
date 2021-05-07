@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebStudio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"> -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet">
@@ -22,15 +22,7 @@
                 <li class="menu__item"><a class="link menu__link" href="./portfolio.html">Портфолио</a></li>
                 <li class="menu__item"><a class="link menu__link" href="">Контакты</a></li>
               </ul>
-           </nav>
-           
-          <!--Burger-btn-->
-           <button type="button" class="burger__btn" data-menu-button>
-             <svg class="burger__icon" height="40" width="40">
-               <use href="./images/icons.svg#icon-mobile-menu"></use>
-             </svg>
-           </button>
-
+          </nav>
            <ul class="list contacts">
              <li class="contacts__item"><a class="link contacts__link" href="mailto:info@devstudio.com">
                <svg class="contacts__icon" width="16" height="12">
@@ -42,12 +34,17 @@
                  </svg> +38 096 111 11 11</a></li>
            </ul>
 
-          <!--Mobile menu-->
-           <div class="mobile-menu" data-menu>
-               <button type="button" class="mobile-menu__close-btn" data-menu-close>
-                 <svg class="mobile-menu__icon" width="40" height="40">
-                   <use href="./images/icons.svg#icon-close-mobile"></use></svg>
-               </button>
+          <!--Burger-btn-->
+          <button type="button" class="burger__btn" data-menu-button>
+            <svg class="burger__icon" height="40" width="40">
+              <use class="icon-menu" href="./images/icons.svg#icon-mobile-menu"></use>
+              <use class="icon-close" href="./images/icons.svg#icon-close-mobile"></use>
+            </svg>
+          </button>     
+      </div>
+    </header>
+            <!--Mobile menu-->
+            <div class="mobile-menu" data-menu>
                <ul class="list mobile-menu__list">
                  <li class="mobile-menu__item">
                    <a href="./index.html" class="link mobile-menu__link mobile-menu__link--current">Студия</a></li>
@@ -56,6 +53,7 @@
                  <li class="mobile-menu__item">
                    <a href="" class="link mobile-menu__link">Контакты</a></li>
                </ul>
+            
                <div>
                  <ul class="list mobile-menu__contacts">
                    <li class="mobile-menu__item">
@@ -73,12 +71,8 @@
                    <li class="mobile-menu__socials-item">
                      <a href="" class="link mobile-menu__socials-link">LinkedIn</a></li>
                  </ul>
-                </div>
-            </div>
-
-        </div>
-      </header>
-   
+               </div>     
+            </div>  
     <main>
 
       <!--Шапка--> 
@@ -474,9 +468,10 @@
         </div>
       </div>
     </footer>
-
-    <script src="./js/mobile-menu.js"></script>
+    
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
+    
     
 
 </body>
