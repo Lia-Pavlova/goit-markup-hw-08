@@ -3,15 +3,15 @@
 }
 
 .team__list {
-  --grid-item-count: 4;
+  --grid-item-count: 1;
   --space-between: 30px;
 
   @media screen and (min-width: 768px) and (max-width: 1199.98px) {
     --grid-item-count: 2;
   }
 
-  @media screen and (max-width: 767.98px) {
-    --grid-item-count: 1;
+  @media screen and (min-width: 1200px) {
+    --grid-item-count: 4;
   }
 }
 
@@ -33,11 +33,11 @@
   font-size: 16px;
   line-height: 1.19;
 
-  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
-    padding: 30px 74px 24px 74px;
-  }
   @media screen and (max-width: 767.98px) {
     padding: 30px 122px 24px 122px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    padding: 30px 74px 24px 74px;
   }
 }
 

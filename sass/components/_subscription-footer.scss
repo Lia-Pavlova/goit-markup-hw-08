@@ -18,12 +18,10 @@
   line-height: 1.14;
   letter-spacing: 0.03em;
   margin-bottom: 20px;
-  padding-top: 12px;
-}
+  padding-top: 0;
 
-@media screen and (max-width: 1199.98px) {
-  .subscription__title {
-    padding-top: 0;
+  @media screen and (min-width: 1200px) {
+    padding-top: 12px;
   }
 }
 

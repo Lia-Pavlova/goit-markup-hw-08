@@ -309,47 +309,6 @@ summary {
   --font-medium: 500;
   --font-ultra-bold: 900;
   --font-bold: 700;
-  /* Fonts: Sizes */
-  --font-size-hero-title: 44px;
-  --font-size-logo: 26px;
-  --font-size-sub-input: 16px;
-  --font-size-modal-title: 20px;
-  --font-size-form-label: 12px;
-  --font-size-member: 16px;
-  --font-size-btn: 16px;
-  --font-size-overlay: 18px;
-  --font-size-example-title: 18px;
-  --font-size-example-type: 16px;
-  --font-size-section-title: 36px;
-  /* Letter-spacing */
-  --letter-spacing-menu: 0.02em;
-  --letter-spacing-contacts: 0.02em;
-  --letter-spacing-sub: 0.03em;
-  --letter-spacing-public-title: 0.03em;
-  --letter-spacing-form: 0.01em;
-  --letter-spacing-filter-btn: 0.03em;
-  --letter-spacing-example-title: 0.06em;
-  --letter-spacing-btn: 0.06em;
-  /* Line-height */
-  --line-height-menu: 1.14;
-  --line-height-hero-title: 1.36;
-  --line-height-contacts: 1.14;
-  --line-height-sub-title: 1.14;
-  --line-height-sub-input: 1.25;
-  --line-height-public-title: 1.14;
-  --line-height-modal-title: 1.15;
-  --line-height-form-label: 1.17;
-  --line-height-form-input: 1.14;
-  --line-height-member: 1.19;
-  --line-height-logo: 1.19;
-  --line-filter-btn: 1.62;
-  --line-height-feature-title: 1.14;
-  --line-height-overlay: 1.56;
-  --line-height-example-title: 2;
-  --line-height-example-type: 1.87;
-  --line-height-btn: 1.87;
-  --line-height-activities: 1.14;
-  --line-height-section-title: 1.17;
 }
 
 html {
@@ -454,28 +413,28 @@ address {
 }
 
 .section {
-  padding: 94px 0;
+  padding: 60px 0;
 }
 
-@media screen and (min-width: 480px) and (max-width: 1199.98px) {
+@media screen and (min-width: 1200px) {
   .section {
-    padding: 60px 0;
+    padding: 94px 0;
   }
 }
 
 .section-title {
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
   color: var(--title-text-color);
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 @media screen and (max-width: 1199.98px) {
   .section-title {
-    margin-bottom: 30px;
-    font-size: 28px;
+    margin-bottom: 50px;
+    font-size: 36px;
   }
 }
 
@@ -537,14 +496,14 @@ address {
   font-weight: 700;
   color: #000000;
   text-decoration: none;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
 }
 
-@media screen and (max-width: 1199.98px) {
+@media screen and (min-width: 1200px) {
   .logo {
-    font-size: 24px;
-    line-height: 1.17;
+    font-size: 26px;
+    line-height: 1.19;
   }
 }
 
@@ -787,7 +746,7 @@ address {
   transition: fill var(--animation);
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .contacts__item > a[href='mailto:info@devstudio.com'] {
     padding-top: 21px;
     padding-bottom: 5px;
@@ -865,7 +824,7 @@ address {
   background-color: var(--dark-bg-text-color);
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 1199.98px) {
   .modal {
     width: 450px;
     height: 609px;
@@ -1223,7 +1182,7 @@ address {
 }
 
 .team__list {
-  --grid-item-count: 4;
+  --grid-item-count: 1;
   --space-between: 30px;
 }
 
@@ -1233,9 +1192,9 @@ address {
   }
 }
 
-@media screen and (max-width: 767.98px) {
+@media screen and (min-width: 1200px) {
   .team__list {
-    --grid-item-count: 1;
+    --grid-item-count: 4;
   }
 }
 
@@ -1260,15 +1219,15 @@ address {
   line-height: 1.19;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199.98px) {
-  .member__card {
-    padding: 30px 74px 24px 74px;
-  }
-}
-
 @media screen and (max-width: 767.98px) {
   .member__card {
     padding: 30px 122px 24px 122px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .member__card {
+    padding: 30px 74px 24px 74px;
   }
 }
 
@@ -1320,19 +1279,19 @@ address {
 }
 
 .customers {
-  --grid-item-count: 6;
+  --grid-item-count: 2;
   --space-between: 30px;
-}
-
-@media screen and (max-width: 767.98px) {
-  .customers {
-    --grid-item-count: 2;
-  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .customers {
     --grid-item-count: 3;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .customers {
+    --grid-item-count: 6;
   }
 }
 
@@ -1365,13 +1324,13 @@ address {
   margin-bottom: 40px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767.98px) {
   .filter {
     justify-content: start;
   }
 }
 
-@media screen and (max-width: 1199.98px) {
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .filter {
     display: flex;
     flex-wrap: wrap;
@@ -1415,7 +1374,7 @@ address {
 }
 
 .example {
-  --grid-item-count: 3;
+  --grid-item-count: 1;
   --space-between: 30px;
 }
 
@@ -1425,9 +1384,9 @@ address {
   }
 }
 
-@media screen and (max-width: 767.98px) {
+@media screen and (min-width: 1200px) {
   .example {
-    --grid-item-count: 1;
+    --grid-item-count: 3;
   }
 }
 
@@ -1587,18 +1546,18 @@ address {
   line-height: 1.14;
   letter-spacing: 0.03em;
   margin-bottom: 20px;
-  padding-top: 12px;
+  padding-top: 0px;
 }
 
-@media screen and (min-width: 768.5px) and (max-width: 1199.98px) {
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .public__title {
     padding-top: 5px;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 1200px) {
   .public__title {
-    padding-top: 0;
+    padding-top: 20px;
   }
 }
 
@@ -1623,12 +1582,12 @@ address {
   line-height: 1.14;
   letter-spacing: 0.03em;
   margin-bottom: 20px;
-  padding-top: 12px;
+  padding-top: 0;
 }
 
-@media screen and (max-width: 1199.98px) {
+@media screen and (min-width: 1200px) {
   .subscription__title {
-    padding-top: 0;
+    padding-top: 12px;
   }
 }
 

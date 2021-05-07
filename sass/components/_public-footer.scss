@@ -26,17 +26,13 @@
   line-height: 1.14;
   letter-spacing: 0.03em;
   margin-bottom: 20px;
-  padding-top: 12px;
-}
+  padding-top: 0px;
 
-@media screen and (min-width: 768.5px) and (max-width: 1199.98px) {
-  .public__title {
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
     padding-top: 5px;
   }
-}
 
-@media screen and (max-width: 768px) {
-  .public__title {
-    padding-top: 0;
+  @media screen and (min-width: 1200px) {
+    padding-top: 20px;
   }
 }
