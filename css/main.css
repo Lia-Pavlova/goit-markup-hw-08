@@ -1336,6 +1336,7 @@ address {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 40px;
+  justify-content: center;
 }
 
 @media screen and (max-width: 767.98px) {
