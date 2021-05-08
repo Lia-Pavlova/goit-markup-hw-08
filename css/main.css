@@ -831,7 +831,7 @@ address {
   transition: transform var(--animation);
   /*overflow-y: scroll;*/
   padding: 40px;
-  z-index: 150;
+  z-index: 1500;
   box-shadow: var(--box-shadow);
   border-radius: 4px;
   background-color: var(--dark-bg-text-color);
@@ -873,7 +873,7 @@ address {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0;
+  /*padding: 0;*/
   top: 8px;
   right: 8px;
   width: 30px;
@@ -894,7 +894,7 @@ address {
   display: block;
   width: 11px;
   height: 11px;
-  z-index: 200;
+  z-index: 2000;
 }
 
 /* Modal form */
