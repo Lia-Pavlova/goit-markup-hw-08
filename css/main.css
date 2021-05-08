@@ -873,7 +873,7 @@ address {
   display: flex;
   justify-content: center;
   align-items: center;
-  /*padding: 0;*/
+  padding: 0;
   top: 8px;
   right: 8px;
   width: 30px;
@@ -889,8 +889,8 @@ address {
 }
 
 .modal__icon-close {
-  /*fill: #000000;
-  transition: fill var(--animation);*/
+  fill: #000000;
+  transition: fill var(--animation);
   display: block;
   width: 11px;
   height: 11px;
