@@ -6,15 +6,15 @@ html {
 *::after,
 *::before {
   box-sizing: inherit;
-  outline: 1px solid red;
+  //outline: 1px solid red;
 }
 
 body {
   font-family: var(--font-family-base);
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+  font-weight: var(--font-normal);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
   color: var(--primary-text-color);
 }
 
@@ -62,4 +62,8 @@ address {
   &:focus {
     color: var(--accent-color);
   }
+}
+
+.modal-open {
+  overflow: hidden;
 }

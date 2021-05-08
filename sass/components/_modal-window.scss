@@ -4,7 +4,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
@@ -16,27 +16,34 @@
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+
+  & .modal {
+    transform: translate(-50%, -50%) scale(0.5);
+  }
 }
 
-.backdrop.is-hidden .modal {
+/*.backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.7);
-}
+}*/
 
 .modal {
   position: absolute;
+  width: 100%;
+  max-height: 100vh;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: transform var(--animation);
 
+  /*overflow-y: scroll;*/
   padding: 40px;
-  z-index: 50;
+  z-index: 150;
 
   box-shadow: var(--box-shadow);
   border-radius: 4px;
   background-color: var(--dark-bg-text-color);
 
-  @media screen and (max-width: 1199.98px) {
+  @media screen and (min-width: 480px) {
     width: 450px;
     height: 609px;
   }
@@ -48,7 +55,7 @@
 }
 
 .modal__title {
-  font-weight: 700;
+  font-weight: var(--font-bold);
   font-size: 20px;
   line-height: 1.5;
   text-align: center;
@@ -77,7 +84,6 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
 
   background-color: var(--dark-bg-text-color);
-  fill: #000000;
 
   &:hover .modal__icon-close,
   &:focus .modal__icon-close {
@@ -86,9 +92,10 @@
 }
 
 .modal__icon-close {
-  fill: #000000;
-  transition: fill var(--animation);
+  /*fill: #000000;
+  transition: fill var(--animation);*/
   display: block;
   width: 11px;
   height: 11px;
+  z-index: 200;
 }

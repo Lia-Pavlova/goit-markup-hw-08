@@ -1,19 +1,15 @@
 .filter {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   margin-bottom: 40px;
 
   @media screen and (max-width: 767.98px) {
     justify-content: start;
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
   @media screen and (min-width: 1200px) {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
+    justify-content: center;
   }
 }
 
@@ -28,7 +24,7 @@
 .filter__button {
   font-family: inherit;
   padding: 6px 22px;
-  font-weight: 500;
+  font-weight: var(--font-medium);
   font-size: 16px;
   line-height: 1.62;
   text-align: center;

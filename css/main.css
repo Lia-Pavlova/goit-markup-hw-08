@@ -319,15 +319,14 @@ html {
 *::after,
 *::before {
   box-sizing: inherit;
-  outline: 1px solid red;
 }
 
 body {
   font-family: var(--font-family-base);
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+  font-weight: var(--font-normal);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
   color: var(--primary-text-color);
 }
 
@@ -374,6 +373,10 @@ address {
 
 .link:hover, .link:focus {
   color: var(--accent-color);
+}
+
+.modal-open {
+  overflow: hidden;
 }
 
 .container {
@@ -447,10 +450,6 @@ address {
 .header__container {
   display: flex;
   align-items: center;
-}
-
-.header__logo {
-  display: block;
 }
 
 @media screen and (max-width: 767.98px) {
@@ -577,6 +576,7 @@ address {
   }
   .burger__btn {
     margin-left: auto;
+    z-index: 20;
   }
   .burger__btn:hover, .burger__btn:focus {
     fill: var(--accent-color);
@@ -602,8 +602,8 @@ address {
 }
 
 .burger__btn {
-  position: relative;
-  z-index: 103;
+  /*position: relative;*/
+  z-index: 13;
   background-color: transparent;
   border: none;
 }
@@ -634,7 +634,7 @@ address {
   left: 0;
   width: 100%;
   height: 100vh;
-  z-index: 100;
+  z-index: 10;
   padding: 48px 40px;
   background: var(--dark-bg-text-color);
   color: var(--title-text-color);
@@ -678,6 +678,12 @@ address {
 .mobile-menu__contact-tel {
   font-size: 34px;
   color: var(--accent-color);
+}
+
+@media screen and (max-width: 479.98px) {
+  .mobile-menu__contact-tel {
+    font-size: 30px;
+  }
 }
 
 .mobile-menu__contact-mail {
@@ -794,7 +800,7 @@ address {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
@@ -809,23 +815,29 @@ address {
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.7);
+  transform: translate(-50%, -50%) scale(0.5);
 }
 
+/*.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.7);
+}*/
 .modal {
   position: absolute;
+  width: 100%;
+  max-height: 100vh;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: transform var(--animation);
+  /*overflow-y: scroll;*/
   padding: 40px;
-  z-index: 50;
+  z-index: 150;
   box-shadow: var(--box-shadow);
   border-radius: 4px;
   background-color: var(--dark-bg-text-color);
 }
 
-@media screen and (max-width: 1199.98px) {
+@media screen and (min-width: 480px) {
   .modal {
     width: 450px;
     height: 609px;
@@ -840,7 +852,7 @@ address {
 }
 
 .modal__title {
-  font-weight: 700;
+  font-weight: var(--font-bold);
   font-size: 20px;
   line-height: 1.5;
   text-align: center;
@@ -869,7 +881,6 @@ address {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--dark-bg-text-color);
-  fill: #000000;
 }
 
 .modal__button-close:hover .modal__icon-close,
@@ -878,11 +889,12 @@ address {
 }
 
 .modal__icon-close {
-  fill: #000000;
-  transition: fill var(--animation);
+  /*fill: #000000;
+  transition: fill var(--animation);*/
   display: block;
   width: 11px;
   height: 11px;
+  z-index: 200;
 }
 
 /* Modal form */
@@ -1078,10 +1090,10 @@ address {
 }
 
 .hero__title {
-  font-weight: 900;
+  font-weight: var(--font-ultra-bold);
   font-size: 26px;
   line-height: 1.62;
-  text-align: center;
+  /*text-align: center;*/
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--dark-bg-text-color);
@@ -1149,6 +1161,12 @@ address {
   padding-bottom: 94px;
 }
 
+@media screen and (max-width: 1199.98px) {
+  .activities {
+    display: none;
+  }
+}
+
 .activities__list {
   --grid-item-count: 3;
   --space-between: 30px;
@@ -1164,7 +1182,7 @@ address {
   width: 100%;
   height: 70px;
   padding: 27px 0;
-  font-weight: 700;
+  font-weight: var(--font-bold);
   line-height: 1.14;
   text-align: center;
   text-transform: uppercase;
@@ -1183,11 +1201,11 @@ address {
 }
 
 .team__list {
-  --grid-item-count: 1;
   --space-between: 30px;
+  --grid-item-count: 1;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+@media screen and (min-width: 768px) {
   .team__list {
     --grid-item-count: 2;
   }
@@ -1212,29 +1230,29 @@ address {
 }
 
 .member__card {
-  padding: 30px 32px;
+  padding: 30px 0 24px;
   display: flex;
   align-items: center;
   flex-direction: column;
   font-size: 16px;
   line-height: 1.19;
-}
-
-@media screen and (max-width: 767.98px) {
-  .member__card {
+  /*@media screen and (max-width: 767.98px) {
     padding: 30px 122px 24px 122px;
   }
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    padding: 30px 74px 24px 74px;
+  }*/
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+@media screen and (min-width: 1200px) {
   .member__card {
-    padding: 30px 74px 24px 74px;
+    padding: 30px;
   }
 }
 
 .member__name {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: var(--font-medium);
   text-transform: none;
   margin-bottom: 10px;
   color: var(--title-text-color);
@@ -1321,7 +1339,7 @@ address {
 
 .filter {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   margin-bottom: 40px;
 }
 
@@ -1331,16 +1349,10 @@ address {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199.98px) {
-  .filter {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
-
 @media screen and (min-width: 1200px) {
   .filter {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
+    justify-content: center;
   }
 }
 
@@ -1355,7 +1367,7 @@ address {
 .filter__button {
   font-family: inherit;
   padding: 6px 22px;
-  font-weight: 500;
+  font-weight: var(--font-medium);
   font-size: 16px;
   line-height: 1.62;
   text-align: center;

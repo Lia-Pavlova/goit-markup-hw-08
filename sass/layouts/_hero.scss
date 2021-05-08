@@ -48,10 +48,10 @@
 }
 
 .hero__title {
-  font-weight: 900;
+  font-weight: var(--font-ultra-bold);
   font-size: 26px;
   line-height: 1.62;
-  text-align: center;
+  /*text-align: center;*/
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--dark-bg-text-color);
