@@ -107,7 +107,7 @@
 }
 
 .mobile-menu__link {
-  font-weight: 500;
+  font-weight: var(--font-medium);
   font-size: 40px;
   line-height: 1.17;
   letter-spacing: 0.02em;
@@ -128,10 +128,6 @@
 .mobile-menu__contact-tel {
   font-size: 34px;
   color: var(--accent-color);
-
-  @media screen and (max-width: 479.98px) {
-    font-size: 30px;
-  }
 }
 
 .mobile-menu__contact-mail {

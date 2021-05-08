@@ -2,7 +2,6 @@
   const refs = {
     openModalBtn: document.querySelector('[data-modal-open]'),
     closeModalBtn: document.querySelector('[data-modal-close]'),
-    menuBtn: document.querySelector("[data-menu-button]"),
     modal: document.querySelector('[data-modal]'),
   };
 
@@ -11,7 +10,6 @@
 
 
   function toggleModal() {
-    document.body.classList.toggle("modal-open")
     refs.modal.classList.toggle('is-hidden');
   }
 })();

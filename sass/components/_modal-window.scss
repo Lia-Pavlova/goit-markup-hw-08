@@ -33,6 +33,7 @@
   padding: 40px;
   left: 50%;
   top: 50%;
+  /*overflow-y: scroll;*/
   transform: translate(-50%, -50%) scale(1);
   transition: transform var(--animation);
   box-shadow: var(--box-shadow);
@@ -42,6 +43,11 @@
   @media screen and (min-width: 480px) {
     min-width: 450px;
     /*height: 609px;*/
+  }
+
+  @media screen and (max-height: 609px) {
+    top: 0;
+    transform: translateX(-50%);
   }
 
   @media screen and (min-width: 1200px) {

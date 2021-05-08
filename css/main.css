@@ -375,10 +375,9 @@ address {
   color: var(--accent-color);
 }
 
-.modal-open {
+/*.modal-open {
   overflow: hidden;
-}
-
+}*/
 .container {
   width: 100%;
   margin: 0 auto;
@@ -658,7 +657,7 @@ address {
 }
 
 .mobile-menu__link {
-  font-weight: 500;
+  font-weight: var(--font-medium);
   font-size: 40px;
   line-height: 1.17;
   letter-spacing: 0.02em;
@@ -678,12 +677,6 @@ address {
 .mobile-menu__contact-tel {
   font-size: 34px;
   color: var(--accent-color);
-}
-
-@media screen and (max-width: 479.98px) {
-  .mobile-menu__contact-tel {
-    font-size: 30px;
-  }
 }
 
 .mobile-menu__contact-mail {
@@ -829,6 +822,7 @@ address {
   padding: 40px;
   left: 50%;
   top: 50%;
+  /*overflow-y: scroll;*/
   transform: translate(-50%, -50%) scale(1);
   transition: transform var(--animation);
   box-shadow: var(--box-shadow);
@@ -840,6 +834,13 @@ address {
   .modal {
     min-width: 450px;
     /*height: 609px;*/
+  }
+}
+
+@media screen and (max-height: 609px) {
+  .modal {
+    top: 0;
+    transform: translateX(-50%);
   }
 }
 
