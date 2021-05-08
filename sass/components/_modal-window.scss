@@ -2,6 +2,7 @@
 
 .backdrop {
   position: fixed;
+  z-index: 104;
   top: 0;
   left: 0;
   width: 100%;
@@ -35,21 +36,19 @@
   transform: translate(-50%, -50%) scale(1);
   transition: transform var(--animation);
 
-  /*overflow-y: scroll;*/
   padding: 40px;
-  z-index: 1500;
 
   box-shadow: var(--box-shadow);
   border-radius: 4px;
   background-color: var(--dark-bg-text-color);
 
   @media screen and (min-width: 480px) {
-    width: 450px;
+    min-width: 450px;
     height: 609px;
   }
 
   @media screen and (min-width: 1200px) {
-    width: 528px;
+    min-width: 528px;
     height: 581px;
   }
 }
@@ -92,10 +91,5 @@
 }
 
 .modal__icon-close {
-  fill: #000000;
-  transition: fill var(--animation);
   display: block;
-  width: 11px;
-  height: 11px;
-  z-index: 2000;
 }
